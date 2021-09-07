@@ -1,0 +1,112 @@
+/* SELECTOR {
+    PROPIEDAD : 1223221
+    PROPIEDAD : "23kpx23"
+} 
+*/
+
+
+    /*font-size: xx-large*/
+   
+ *{
+     font-size: x-large;
+     /*font-family: fantasy;*/
+    
+ }
+
+body{
+    background-color: black
+}
+
+footer {
+    font-family: 'Klee One', cursive;
+    background-color: lightcoral !important;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    left: 10px;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+
+a {
+    color: white;
+    border-color: chartreuse;
+    border-style:dotted;
+    border-width: 10px;
+
+    /*background-color:black; Recordar que esto puede alterar elementos no deseados*/
+}
+
+/* Primer pseudo-clase */
+
+a :hover {
+    background-color: white;
+}
+
+
+#Iniciar {
+    color: white;
+}
+
+.Registrar {
+    background-color: white;
+    color: black;
+}
+
+body > table > tbody > tr  {
+    background-color: black;
+    color: white;
+}
+    /*
+body > table > tbody > tr > td:nth-child(2) > section > p {
+    background-color: black;
+    color: white; 
+}
+*/
+
+li, h2 {
+    color:white
+}
+
+.fa-heart {
+ color: red ;
+}
+
+body > header > i.fas.fa-heart {
+    scale: 120;
+}
+
+tr:nth-child(odd) > td {
+    padding-top: 40px;
+}
+
+/******************************************************************/
+
+/*      Estilo del componente MusicBotton                         */
+
+/******************************************************************/
+
+.MusicButton {
+    border-color: red;
+    /*Tuve que sobreescribir el estilo de a por mi class*/
+    border-style: none;
+    border-width: 2px;
+    /*transition:ease-out;
+    transition-duration: 5s;*/
+    animation-name: CambiarColor;
+    animation-duration: 5s;
+}
+@keyframes CambiarColor {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+.MusicButton:hover {
+    background-color: red;
+    box-shadow: chartreuse;
+}
