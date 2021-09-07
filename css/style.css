@@ -100,6 +100,7 @@ tr:nth-child(odd) > td {
     animation-name: CambiarColor;
     animation-duration: 5s;
 }
+
 @keyframes CambiarColor {
     from {background-color: red;}
     to {background-color: yellow;}
@@ -109,4 +110,69 @@ tr:nth-child(odd) > td {
 .MusicButton:hover {
     background-color: red;
     box-shadow: chartreuse;
+}
+
+.player {
+    color: white;
+    position: absolute;
+    bottom: 1%;
+    left: 0px;
+}
+
+
+/******************************************************************************/
+
+/*          Media queries, arranco por mobile                                 */
+
+/******************************************************************************/
+
+@media only screen and (max-width: 600px) {
+    /*body {
+        background:red;
+    }
+
+    aside {
+        display: block;
+    }*/
+
+    #listcontainer {
+        display: flex;
+        flex-direction: col;
+    }
+
+    .main_container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: auto;
+        align-content: start
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: auto;
+        align-content: start
+    }
+      
+
+    .item {
+        flex: 0 0 auto;
+        margin: 10px;
+    }
+
+
+
+    /*#container {
+        background-color: red;
+        display: flex;
+        flex-direction:row;
+    }*/
+
+    footer {
+        display: none;
+    }
 }
