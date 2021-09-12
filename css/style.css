@@ -113,11 +113,47 @@ tr:nth-child(odd) > td {
 }
 
 .player {
-    color: white;
-    position: absolute;
+    color: white !important; /*Lo hice important porque el class item 4 de la grid tiene más prioridad*/
+    /*position: absolute;
     bottom: 1%;
-    left: 0px;
+    left: 0px;*/
 }
+
+/*******************************************************************************/
+
+/*                 Grid Container, CSS                                         */
+
+/*******************************************************************************/
+
+.item1 {   grid-area: header; 
+    border-color: black;
+    border-style: dotted;
+    }
+.item2 { grid-area: menu; 
+    border-color: black;
+    border-style: dotted;
+    }
+.item3 { grid-area: main; 
+    border-color: black;
+    border-style: dotted;
+    }
+.item4 { grid-area: footer; 
+    border-color: black;
+    border-style: dotted;
+    color: red;
+    }
+
+.grid-container {
+    /*Intentamos duplicar el área de la derecha en comparación con la del menú*/
+    display: grid;
+    grid-template-areas:
+      'menu header header'
+      'menu main main'
+      'footer footer footer';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
 
 
 /******************************************************************************/
