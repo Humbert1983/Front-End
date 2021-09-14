@@ -125,19 +125,23 @@ tr:nth-child(odd) > td {
 
 /*******************************************************************************/
 
-.item1 {   grid-area: header; 
+.item1 {   
+    grid-area: header; 
     border-color: black;
     border-style: dotted;
     }
-.item2 { grid-area: menu; 
+.item2 { 
+    grid-area: menu; 
     border-color: black;
     border-style: dotted;
     }
-.item3 { grid-area: main; 
+.item3 { 
+    grid-area: main; 
     border-color: black;
     border-style: dotted;
     }
-.item4 { grid-area: footer; 
+.item4 { 
+    grid-area: footer; 
     border-color: black;
     border-style: dotted;
     color: red;
