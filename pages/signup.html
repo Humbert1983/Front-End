@@ -5,29 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
-<body>
-    <a href="../index.html" target="_blank">Ir a Home</a>
-    Estoy en la página de registro de nuevo usuario
-    <button>Regístrate con Facebook</button>
-    <br>
-    <br>
-    <form>
-        <!--Recordar cumplir con el estandar WCAG 2.1-->
-        <fieldset>
-            <label>¿Cuál es tu correo electrónico?</label>
-            <input type="text" placeholder="Introduce tu correo electrónico" required>
+<body class="body_register">
+    <div class="grid-container_register">
+        <div class="header_register">
+            <a href="../index.html">Ir a Home</a>
+            <br>
+            Regístrate gratis para escuchar 
+        </div>
+        <div class="social_register">
+            <button>Regístrate con Facebook</button>
             <br>
             <br>
-            <label>Confirma el correo electrónico</label>
-            <input type="email" placeholder="Vuelve a introducir tu correo electrónico" required>
-            <br>
-            <br>
-            <input type="submit" value="Regístrate">
-        </fieldset>
-    </form>
+        </div>
+        <div class="email_register">
+            <form>
+                <!--Recordar cumplir con el estandar WCAG 2.1-->
+                <fieldset>
+                    <label>¿Cuál es tu correo electrónico?</label>
+                    <input type="text" placeholder="Introduce tu correo electrónico" required>
+                    <br>
+                    <br>
+                    <label>Confirma el correo electrónico</label>
+                    <input type="email" placeholder="Vuelve a introducir tu correo electrónico" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Regístrate">
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

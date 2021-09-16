@@ -10,8 +10,15 @@
  *{
      font-size: x-large;
      /*font-family: fantasy;*/
+     /*font-size: 2rem;*/
+    /*font-family: fantasy; /* En mi caso tengo esta font y la uso*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     
  }
+
+ /* Toda la pagina siempre debe tener fondo negro */
 
 body{
     background-color: black
@@ -38,12 +45,12 @@ a {
     border-style:dotted;
     border-width: 10px;
 
-    /*background-color:black; Recordar que esto puede alterar elementos no deseados*/
+    /*background-color:black !important; Importante: Recordar que esto puede alterar elementos no deseados*/
 }
 
 /* Primer pseudo-clase */
 
-a :hover {
+a:hover {
     background-color: white;
 }
 
@@ -52,7 +59,7 @@ a :hover {
     color: white;
 }
 
-.Registrar {
+.whitebg {
     background-color: white;
     color: black;
 }
@@ -68,7 +75,7 @@ body > table > tbody > tr > td:nth-child(2) > section > p {
 }
 */
 
-li, h2 {
+ul, h2 {
     color:white
 }
 
@@ -90,6 +97,11 @@ tr:nth-child(odd) > td {
 
 /******************************************************************/
 
+@keyframes CambiarColor {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
 .MusicButton {
     border-color: red;
     /*Tuve que sobreescribir el estilo de a por mi class*/
@@ -99,11 +111,6 @@ tr:nth-child(odd) > td {
     transition-duration: 5s;*/
     animation-name: CambiarColor;
     animation-duration: 5s;
-}
-
-@keyframes CambiarColor {
-    from {background-color: red;}
-    to {background-color: yellow;}
 }
 
 
@@ -184,7 +191,7 @@ tr:nth-child(odd) > td {
 
 /******************************************************************************/
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
     /*body {
         background:red;
     }
@@ -200,11 +207,7 @@ tr:nth-child(odd) > td {
 
     .main_container {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: start;
-        align-items: auto;
-        align-content: start
+        flex-direction: column;   
     }
 
     .container {
@@ -244,6 +247,68 @@ tr:nth-child(odd) > td {
 
 /*************************************************************************************/
 
-/*                      Estilo del componente Registar                               */
+/*                      Estilo de la página para Registar                            */
 
 /*************************************************************************************/
+
+/*CSS Desktop*/
+
+.body_register {
+    background-color: white;
+}
+
+.header_register {   
+    grid-area: header_register; 
+    border-color: black;
+    border-style: dotted;
+    }
+
+
+.social_register {   
+    grid-area: social_register; 
+    border-color: black;
+    border-style: dotted;
+    }
+
+.email_register { 
+    grid-area: email_register; 
+    border-color: black;
+    border-style: dotted;
+    }
+
+    .grid-container_register {
+        display: grid;
+        grid-template-areas:
+          'header_register header_register'
+          'social_register email_register'
+          'social_register email_register';
+          border-color: red; /* Lo uso durante el desarrollo para verificar que cosa estoy cambiando */
+          border-style:solid;
+        grid-gap: 0px;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+/*CSS Common*/
+
+/*CSS Mobile*/
+
+@media only screen and (max-width: 500px) {
+
+        .grid-container_register {
+            display: grid;
+            grid-template-areas:
+              'header_register'
+              'social_register'
+              'email_register';
+              border-color: red; /* Lo uso durante el desarrollo para verificar que cosa estoy cambiando */
+              border-style:solid;
+            grid-gap: 0px;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+          }
+        
+
+}
